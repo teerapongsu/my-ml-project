@@ -41,7 +41,7 @@ def preprocess_image(image_bytes: bytes) -> np.ndarray:
     # Transpose HWC to CHW and add batch dimension
     img_data = np.transpose(img_data, (2, 0, 1))
     img_data = np.expand_dims(img_data, axis=0)
-    return img_datas
+    return img_data
 
 @app.get("/")
 def read_root():
